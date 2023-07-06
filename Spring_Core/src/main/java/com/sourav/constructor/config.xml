@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+	<bean name="CertificateOne" class="com.sourav.constructor.Certificate">
+		<constructor-arg value="11" />
+		<constructor-arg value="java" />
+	</bean>
+	
+	<bean name="studentOne" class="com.sourav.constructor.Student"> 
+		<constructor-arg value="101" type="int"/>
+		<constructor-arg value="Sourav" />
+		<constructor-arg value="India" />
+		<constructor-arg>
+			<list>
+				<value>java</value>
+				<value>python</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg ref="CertificateOne"/>
+	
+	
+		<!-- <constructor-arg value="101" type="int" index="0"></constructor-arg> -->
+	
+		<!-- <constructor-arg value="101" type="int"></constructor-arg> -->
+		
+		<!-- it will call the consturctor ambugity -->
+		<!-- <constructor-arg value="101"></constructor-arg> -->
+		<!-- <constructor-arg value="Sourav"></constructor-arg> -->
+	</bean>
+</beans>
