@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<!-- bean definitions here -->
+	<bean name="addressOne" class="com.sourav.autowire.annotation.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="state" value="karnatak"></property>
+	</bean>
+		<bean name="addressTwo" class="com.sourav.autowire.annotation.Address">
+		<property name="city" value="Mumbai"></property>
+		<property name="state" value="Maharashat"></property>
+	</bean>
+	<bean name="studentOne" class="com.sourav.autowire.annotation.Student"></bean> 
+	
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- bean definitions here -->
+	<!-- byName ___ Setter Di-->
+	<!-- 
+		<bean name="address" class="com.sourav.autowired.xml.Address"> 
+			<property name="city" value="Banglore"></property> 
+			<property name="state" value="karnatak"></property> 
+		</bean> 
+		<bean name="studentOne" class="com.sourav.autowired.xml.Student" autowire="byName"> </bean> 
+	-->
+
+	<!-- byType  ___ Setter Di -->
+<!-- 	<bean name="addressOne" class="com.sourav.autowired.xml.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="state" value="karnatak"></property>
+	</bean>
+	<bean name="studentOne" class="com.sourav.autowired.xml.Student" autowire="byType"> </bean>  -->
+	
+	<!-- Constructor -->
+<!-- 	<bean name="addressOne" class="com.sourav.autowired.xml.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="state" value="karnatak"></property>
+	</bean>
+	<bean name="studentOne" class="com.sourav.autowired.xml.Student" autowire="constructor"> </bean>  -->
+	
+	 
+	<bean name="addressOne" class="com.sourav.autowired.xml.Address">
+		<property name="city" value="Banglore"></property>
+		<property name="state" value="karnatak"></property>
+	</bean>
+	<bean name="addressTwo" class="com.sourav.autowired.xml.Address" primary="true">
+		<property name="city" value="Pune"></property>
+		<property name="state" value="Maha"></property>
+	</bean>
+	<bean name="studentOne" class="com.sourav.autowired.xml.Student" autowire="constructor"> </bean>
+</beans>
