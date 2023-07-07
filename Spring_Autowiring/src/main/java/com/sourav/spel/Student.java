@@ -20,18 +20,25 @@ public class Student {
 
 	@Value("#{1==1}")
 	public boolean equalValid;
-	
+
 	@Value("#{1 lt 3}")
 	public boolean equalValidLt;
-	
+
 	@Value("#{1==3 || 2==2}")
 	public boolean checkStatus;
-	
+
 	@Value("#{2<3 ? 'Yes' : 'No'}")
 	public String ternaeryCheck;
-	
-	@Value("#{T.(jav.lang.Math).PI}")
-	public boolean num;
+
+	@Value("#{T(java.lang.Math).PI}")
+	public int num;
+
+	public static String call() {
+		return "Call method call";
+	}
+
+	@Value("#{T(com.sourav.spel.Student).call()}")
+	public String callMethod;
 	
 	@Override
 	public String toString() {
@@ -39,7 +46,5 @@ public class Student {
 				+ ", equalValidLt=" + equalValidLt + ", checkStatus=" + checkStatus + ", ternaeryCheck=" + ternaeryCheck
 				+ ", num=" + num + "]";
 	}
-	
-	
 
 }
